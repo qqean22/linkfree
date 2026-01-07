@@ -1,35 +1,52 @@
 {
-  "profile": {
-    "name": "Your Name",
-    "bio": "Welcome to my link tree! Click below to explore.",
-    "avatar": ""
-  },
-  "links": [
-    {
-      "title": "GitHub",
-      "url": "https://github.com",
-      "icon": "💻"
+  "studios": {
+    "studio1": {
+      "profile": {
+        "name": "Studio 1",
+        "bio": "Welcome to Studio 1! Click below to explore.",
+        "avatar": ""
+      },
+      "links": [
+        {
+          "title": "GitHub",
+          "url": "https://github.com",
+          "icon": "💻"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com",
+          "icon": "🐦"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com",
+          "icon": "💼"
+        }
+      ]
     },
-    {
-      "title": "Twitter",
-      "url": "https://twitter.com",
-      "icon": "🐦"
-    },
-    {
-      "title": "LinkedIn",
-      "url": "https://linkedin.com",
-      "icon": "💼"
-    },
-    {
-      "title": "Portfolio",
-      "url": "https://example.com",
-      "icon": "🎨"
-    },
-    {
-      "title": "Blog",
-      "url": "https://blog.example.com",
-      "icon": "✍️"
+    "studio2": {
+      "profile": {
+        "name": "Studio 2",
+        "bio": "Welcome to Studio 2! Click below to explore.",
+        "avatar": ""
+      },
+      "links": [
+        {
+          "title": "Portfolio",
+          "url": "https://example.com",
+          "icon": "🎨"
+        },
+        {
+          "title": "Blog",
+          "url": "https://blog.example.com",
+          "icon": "✍️"
+        },
+        {
+          "title": "Contact",
+          "url": "mailto:contact@example.com",
+          "icon": "📧"
+        }
+      ]
     }
-  ]
+  }
 }
-
