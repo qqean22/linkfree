@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import eventsData from '@/data/events.json'
 
 interface PageProps {
@@ -83,13 +84,23 @@ export default function EventPage({ params }: PageProps) {
           <div className="absolute top-20 right-[10%] opacity-80">
             <StickyNote>what if?</StickyNote>
           </div>
-          <div className="absolute top-32 left-[8%] opacity-70 font-handwritten text-2xl text-charcoal/70">
-            ✿ cosy vibes
+          <div className="absolute top-16 left-[5%] sm:left-[8%] flex flex-col items-start gap-2">
+            <Image
+              src="/images/soft-tag.png"
+              alt=""
+              width={150}
+              height={150}
+              className="object-contain opacity-90 drop-shadow-sm"
+              unoptimized
+            />
+            <span className="font-handwritten text-xl sm:text-2xl text-charcoal/70">
+              ✿ cosy vibes
+            </span>
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-charcoal max-w-2xl mx-auto leading-tight">
             {event.title}
           </h1>
-          <p className="mt-6 text-xl text-taupe max-w-xl mx-auto">
+          <p className="mt-8 text-xl text-taupe max-w-xl mx-auto">
             {event.tagline}
           </p>
           <p className="mt-8 text-lg text-charcoal/80 max-w-lg mx-auto leading-relaxed">

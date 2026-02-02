@@ -62,7 +62,7 @@ export default function StudioPage({ profile, links }: StudioPageProps) {
           <p className="text-sm text-taupe/70">
             Powered by{' '}
             <a
-              href="https://vercel.com"
+              href="https://linkfree.win"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-darkBrown hover:underline transition-colors"

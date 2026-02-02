@@ -1,17 +1,17 @@
 {
   "studio1": {
     "girls-night-in": {
-      "title": "Girl's Night In @ the Studio",
+      "title": "Girl's Night In @ AXI Studio",
       "tagline": "An evening of passion talks & cosy vibes",
       "description": "Bring something you love to share. We'll gather, listen, and practice speaking from the heart.",
       "details": [
         {
           "heading": "What to bring",
-          "body": "A short presentation (5–10 minutes) on a passion topic of your choice. Could be a hobby, a cause, a weird fact, a book, a place—anything that lights you up.",
+          "body": "A short presentation (3-5 minutes) on a passion topic of your choice. Could be a hobby, a cause, a weird fact, a book, a place—anything that lights you up.",
           "accent": "pink"
         },
         {
-          "heading": "Why 5–10 minutes?",
+          "heading": "Why 3-5 minutes?",
           "body": "Practice eloquence. Saying something clearly and with presence is a skill. This is a low-stakes, supportive space to try it.",
           "accent": "green"
         },
@@ -22,7 +22,7 @@
         }
       ],
       "cta": "Come as you are. Speak from the heart.",
-      "backLabel": "Back to Studio 1"
+      "backLabel": "Back"
     }
   }
 }
