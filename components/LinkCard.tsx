@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import NextLink from 'next/link'
 
 interface LinkCardProps {
   title: string
@@ -12,18 +13,11 @@ interface LinkCardProps {
 export default function LinkCard({ title, url, icon, index }: LinkCardProps) {
   const [isHovered, setIsHovered] = useState(false)
 
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative block w-full max-w-md mx-auto"
-      style={{
-        animationDelay: `${index * 50}ms`,
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+  const isExternal = url.startsWith('http')
+  const className = 'group relative block w-full max-w-md mx-auto'
+
+  const content = (
+    <>
       <div
         className={`
           relative overflow-hidden rounded-2xl p-6
@@ -70,7 +64,6 @@ export default function LinkCard({ title, url, icon, index }: LinkCardProps) {
           </svg>
         </div>
         
-        {/* Animated underline effect */}
         <div
           className={`
             absolute bottom-0 left-0 h-0.5 bg-darkBrown
@@ -79,7 +72,34 @@ export default function LinkCard({ title, url, icon, index }: LinkCardProps) {
           `}
         />
       </div>
-    </a>
+    </>
+  )
+
+  if (isExternal) {
+    return (
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+        style={{ animationDelay: `${index * 50}ms` }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {content}
+      </a>
+    )
+  }
+
+  return (
+    <NextLink
+      href={url}
+      className={className}
+      style={{ animationDelay: `${index * 50}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {content}
+    </NextLink>
   )
 }
-

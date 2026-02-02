@@ -8,6 +8,11 @@
       },
       "links": [
         {
+          "title": "Girl's Night In @ the Studio",
+          "url": "/studio/studio1/event/girls-night-in",
+          "icon": "🌸"
+        },
+        {
           "title": "GitHub",
           "url": "https://github.com",
           "icon": "💻"
