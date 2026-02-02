@@ -1,68 +1,79 @@
 # LinkFree
 
-A self-hosted linktree-like site builder. One link, your links, your database.
+A beautiful, self-hosted link tree alternative built with Next.js and deployed on Vercel.
 
 ## Features
 
-- 🚀 **Next.js 14** – Fast, reactive UI
-- 🗄️ **Supabase (PostgreSQL)** – Pages and links stored in your own database
-- 📱 **Responsive** – Works on all devices
-- 🎨 **Customizable** – Edit `tailwind.config.ts` for colors and style
+- 🚀 **Fast & Reactive** - Built with Next.js 14 and optimized for performance
+- 🎨 **Beautiful Design** - Custom color palette with smooth animations
+- 📱 **Responsive** - Works perfectly on all devices
+- ⚡ **Minimal Tech Stack** - Next.js, TypeScript, and Tailwind CSS
+- 🔧 **Easy to Customize** - Edit `data/links.json` to add your links
 
 ## Getting Started
 
-### 1. Supabase
+### Local Development
 
-1. Create a project at [supabase.com](https://supabase.com).
-2. In **Settings → Database** copy:
-   - **Connection string → URI** (Transaction / pooler) → use as `DATABASE_URL`
-   - **Direct connection** URI → use as `DIRECT_URL`
-3. Create `.env` from the example:
-
-```bash
-cp .env.example .env
-```
-
-4. Paste your Supabase URIs into `.env` (replace `[PASSWORD]`, `[PROJECT_REF]`, `[REGION]`).
-
-### 2. Install and migrate
-
+1. Install dependencies:
 ```bash
 npm install
-npx prisma generate
-npx prisma db push
 ```
 
-### 3. Run the app
+2. Edit your links in `data/links.json`:
+```json
+{
+  "profile": {
+    "name": "Your Name",
+    "bio": "Your bio",
+    "avatar": "https://example.com/avatar.jpg"
+  },
+  "links": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com/yourusername",
+      "icon": "💻"
+    }
+  ]
+}
+```
 
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). The home page is a standalone landing; link pages are at `/studio/[slug]` and read from the database (with fallback to `data/links.json` if no DB row exists).
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### 4. Seed (optional)
+### Deploy to Vercel
 
-To seed the DB from `data/links.json`:
+1. Push your code to GitHub
+2. Import your repository in [Vercel](https://vercel.com)
+3. Vercel will automatically detect Next.js and deploy
+4. Your LinkFree is live! 🎉
 
-```bash
-npm run db:seed
-```
+## Customization
 
-## Deploy (Vercel)
+### Colors
 
-1. Push to GitHub and import the repo in [Vercel](https://vercel.com).
-2. Add env vars: `DATABASE_URL` and `DIRECT_URL` from Supabase.
-3. Deploy. Run migrations in your build or in the Supabase SQL editor using `prisma migrate deploy` or the generated SQL.
+Edit `tailwind.config.ts` to customize the color palette:
+- `charcoal` - Dark charcoal gray
+- `cream` - Off-white/cream
+- `darkBrown` - Dark brown/deep taupe
+- `beige` - Light beige/pale tan
+- `taupe` - Medium taupe/light brown-gray
+
+### Links
+
+All links are stored in `data/links.json`. Simply add, remove, or modify entries to update your link tree.
 
 ## Tech Stack
 
-- **Next.js 14** – React framework
-- **TypeScript** – Type safety
-- **Tailwind CSS** – Styling
-- **Supabase** – PostgreSQL database
-- **Prisma** – ORM and migrations
+- **Next.js 14** - React framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Vercel** - Hosting
 
 ## License
 
 MIT
+
